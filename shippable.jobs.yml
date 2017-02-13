@@ -3,3 +3,8 @@ jobs:
     type: manifest
     steps:
       - IN: nginx-image-4-2
+      
+  - name: nginx-manifest-4-2a
+    type: manifest
+    steps:
+      - IN: nginx-image-4-2
