@@ -2,21 +2,21 @@
 language: node_js
 
 build:
-  pre_ci_boot:
-    image_name: drydock/u14nodall
-    image_tag: prod
-    pull: true
+#  pre_ci_boot:
+#    image_name: drydock/u14nodall
+#    image_tag: prod
+#    pull: true
   ci:
     - echo "here_askask_1"
     - echo "there_1"
     
-integrations:
-  notifications:
-    - integrationName: slack-subint
-      type: slack
-      recipients:
-        - "#test-5148"
-      on_start: always
+#integrations:
+#  notifications:
+#    - integrationName: slack-subint
+#      type: slack
+#      recipients:
+#        - "#test-5148"
+#      on_start: always
 
 #    - integrationName: email-subint
 #      type: email
