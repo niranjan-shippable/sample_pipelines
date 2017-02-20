@@ -3,7 +3,7 @@ jobs:
     type: runSh
     steps:
       - TASK:
-        - script: exit 0
+        - script: docker ps
     on_success:
       - script: echo "successfully completed"
 
