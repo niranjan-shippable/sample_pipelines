@@ -1,12 +1,29 @@
 jobs:
-  - name: runSh-Job
+  - name: No-dependencies
     type: runSh
     steps:
-      - IN: nginx-image
       - TASK:
-        - script: docker pull shipimg/genexec:v5.2.3
+        - script: echo "true"
     on_success:
       - script: echo "successfully completed"
+
+  - name: exit-0
+    type: runSh
+    steps:
+      - TASK:
+        - script: exit 0
+    on_success:
+      - script: echo "successfully completed"
+    always:
+      - script: echo "harry potter" 
+
+  - name: exit-1
+    type: runSh
+    steps:
+      - TASK:
+        - script: exit 1
+    on_failure:
+      - script: echo "failed"
 
   - name: sample_java_runCI
     type: runCI
