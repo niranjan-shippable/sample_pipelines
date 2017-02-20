@@ -1,4 +1,13 @@
 jobs:
+  - name: dependencies
+    type: runSh
+    steps:
+      - IN: nginx-image
+      - TASK:
+        - script: echo "true"
+    on_success:
+      - script: echo "successfully completed"
+
   - name: No-dependencies
     type: runSh
     steps:
