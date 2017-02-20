@@ -3,7 +3,7 @@ jobs:
     type: runSh
     steps:
       - TASK:
-        - script: echo "true"
+        - script: exit 0
     on_success:
       - script: echo "successfully completed"
 
