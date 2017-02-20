@@ -12,4 +12,4 @@ jobs:
     type: manifest
     steps:
       - IN: nginx-image-prod82
-      - IN: runSh-Job2
+#      - IN: runSh-Job2
