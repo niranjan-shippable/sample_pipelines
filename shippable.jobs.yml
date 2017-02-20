@@ -2,7 +2,7 @@ jobs:
   - name: dependencies
     type: runSh
     steps:
-      - IN: nginx-image
+      #- IN: nginx-image
       - TASK:
         - script: echo "true2"
     on_success:
