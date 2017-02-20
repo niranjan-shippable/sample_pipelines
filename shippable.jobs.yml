@@ -5,7 +5,7 @@ jobs:
       - TASK:
         - script: sudo apt-get install tree
         - script: tree -F IN
-        - script: sleep 2
+#        - script: sleep 2
     on_success:
       - script: echo "successfully completed"
 
