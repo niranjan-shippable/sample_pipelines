@@ -3,7 +3,7 @@ jobs:
     type: runSh
     steps:
       - TASK:
-        - script: echo "true"
+        - script: echo "sample_pipelines"
     on_success:
       - script: echo "successfully completed"
 
