@@ -3,7 +3,7 @@ jobs:
     type: runSh
     steps:
       - TASK:
-        - script: docker ps
+        - script: docker pull shipimg/genexec:v5.2.3
     on_success:
       - script: echo "successfully completed"
 
