@@ -11,4 +11,5 @@ jobs:
   
   - name: same-name
     type: manifest
-    test-flag:
+    steps:
+      - IN: nginx-image-4-2 
