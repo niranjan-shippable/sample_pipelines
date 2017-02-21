@@ -8,3 +8,6 @@ jobs:
     type: manifest
     steps:
       - IN: nginx-image-4-2
+  
+  - flags:
+    - test-flag
