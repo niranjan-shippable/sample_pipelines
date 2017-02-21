@@ -10,4 +10,4 @@ jobs:
       - IN: nginx-image-4-2
   
   - name: same-name
-    - test-flag
+    test-flag
