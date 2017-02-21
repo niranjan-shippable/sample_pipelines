@@ -9,5 +9,5 @@ jobs:
     steps:
       - IN: nginx-image-4-2
   
-  - flags:
+  - name: same-name
     - test-flag
