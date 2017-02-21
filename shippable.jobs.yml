@@ -10,6 +10,6 @@ jobs:
       - IN: nginx-image-4-2
   
   - name: same-name
-    type: manifest
-    steps:
-      - IN: nginx-image-4-2 
+#    type: manifest
+#    steps:
+#      - IN: nginx-image-4-2
