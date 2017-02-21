@@ -9,7 +9,7 @@ jobs:
     steps:
       - IN: nginx-image-4-2
   
-  - name: same-name
+#  - name: same-name
 #    type: manifest
 #    steps:
 #      - IN: nginx-image-4-2
