@@ -12,4 +12,4 @@ resources:
     integration: github-subint
     pointer:
       sourceName: ankul-shippable/sample_pipelines
-      branch: "bran/ch"
+      branch: "master"
