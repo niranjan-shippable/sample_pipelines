@@ -4,3 +4,4 @@ jobs:
     steps:
       - IN: nginx-image
       - IN: sample-pipeline
+      - IN: sample_java_runCI
