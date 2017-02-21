@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: nginx-image-4-2
-#      - IN: sample_java_runCI
+      - IN: sample_java_runCI
 
   - name: nginx-manifest-4-2a
     type: manifest
