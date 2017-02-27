@@ -9,7 +9,7 @@ resources:
 
   - name: sample_java-gitRepo
     type: gitRepo
-    integration: github
+    integration: "github-subint"
     pointer:
       sourceName: ankul-shippable/sample_java
       branch: master
