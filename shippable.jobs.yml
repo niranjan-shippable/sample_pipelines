@@ -1,6 +1,5 @@
 jobs:  
-  - name: sample_pipelines_runCI
-    type: runCI
+  - name: nginx-manifest
+    type: manifest
     steps:
-      - OUT: nginx-image-trace
-      - OUT: sample_java_runCI
+      - IN: nginx-image-trace
