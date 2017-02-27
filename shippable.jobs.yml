@@ -16,7 +16,7 @@ jobs:
   - name: runSh-trace
     type: runSh
     steps:
-      - IN: nginx-image-trace
+      - IN: sample_java-gitRepo
       - TASK:
         - script: sudo apt-get install tree
         - script: tree -F IN
