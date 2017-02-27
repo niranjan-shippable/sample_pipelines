@@ -3,12 +3,14 @@ jobs:
     type: manifest
     steps:
       - IN: nginx-image-trace
+      - IN: trigger-4
 
   - name: ddc-deploy-trace
     type: deploy
     steps:
       - IN: nginx-manifest-trace
       - IN: ddc-cluster-trace
+      - IN: params-trace
       - TASK: managed
 
   - name: runSh-trace
