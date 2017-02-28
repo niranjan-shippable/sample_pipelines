@@ -13,16 +13,16 @@ jobs:
       - IN: params-trace
       - TASK: managed
 
-  - name: runSh-trace
-    type: runSh
-    steps:
-      - IN: sample_java-gitRepo
-      - TASK:
-        - script: sudo apt-get install tree
-        - script: tree -F IN
-        - script: sleep 3
-    on_success:
-      - script: echo "successfully completed"
+#  - name: runSh-trace
+#    type: runSh
+#    steps:
+#      - IN: sample_java-gitRepo
+#      - TASK:
+#        - script: sudo apt-get install tree
+#        - script: tree -F IN
+#        - script: sleep 3
+#    on_success:
+#      - script: echo "successfully completed"
 
   - name: sample_java_runCI
     type: runCI
