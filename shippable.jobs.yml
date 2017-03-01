@@ -1,22 +1,22 @@
 jobs:  
-  - name: nginx-manifest-trace
+  - name: nginx-manifest-trace_copy
     type: manifest
     steps:
-      - IN: nginx-image-trace
-      - IN: trigger-4
+      - IN: nginx-image-trace_copy
+      - IN: trigger-trace_copy
 
-  - name: ddc-deploy-trace
+  - name: ddc-deploy-trace_copy
     type: deploy
     steps:
-      - IN: nginx-manifest-trace
-      - IN: ddc-cluster-trace
-      - IN: params-trace
+      - IN: nginx-manifest-trace_copy
+      - IN: ddc-cluster-trace_copy
+      - IN: params-trace_copy
       - TASK: managed
 
-  - name: runSh-trace
+  - name: runSh-trace_copy
     type: runSh
     steps:
-      - IN: sample_java-gitRepo
+      - IN: sample_java-gitRepo_copy
       - TASK:
         - script: sudo apt-get install tree
         - script: tree -F IN
@@ -27,5 +27,5 @@ jobs:
   - name: sample_java_runCI
     type: runCI
     steps:
-      - IN: runSh-trace
+      - IN: runSh-trace_copy
       - OUT: nginx-image-trace
