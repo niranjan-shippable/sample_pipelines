@@ -7,8 +7,8 @@ build:
 #    image_tag: prod
 #    pull: true
   ci:
-    - echo "here_askask_1"
-    - echo "there_1"
+    - echo "here_askask_2"
+    - echo "there_2"
     
 #integrations:
 #  notifications:
