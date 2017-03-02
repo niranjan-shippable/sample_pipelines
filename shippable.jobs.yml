@@ -5,8 +5,8 @@ jobs:
       - OUT: nginx-image-params
       - OUT: params-params
 
-  - name: nginx-manifest-params
-    type: manifest
-    steps:
-      - IN: nginx-image-params
-      - IN: params-params
+#  - name: nginx-manifest-params
+#    type: manifest
+#    steps:
+#      - IN: nginx-image-params
+#      - IN: params-params
