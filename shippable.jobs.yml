@@ -4,10 +4,19 @@ jobs:
     steps:
       - IN: serial-trigger2
       - TASK:
-        - script: for NUM in `seq 1 1 1000000`; do echo $NUM; done
+        - script: sleep 30
     on_success:
       - script: echo "successfully completed"
       
+  - name: runSh-Job3
+    type: runSh
+    steps:
+      - IN: serial-trigger2
+      - TASK:
+        - script: sleep 30
+    on_success:
+      - script: echo "successfully completed"
+
   - name: nginx-manifest-2
     type: manifest
     steps:
