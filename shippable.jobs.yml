@@ -22,4 +22,4 @@ jobs:
     steps:
       - IN: nginx-image-prod81
       - TASK:
-        - script: docker images | grep busybox
+        - script: docker images
