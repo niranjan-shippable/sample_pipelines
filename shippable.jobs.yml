@@ -1,4 +1,10 @@
 jobs:  
+  - name: sample_node_runCI
+    type: runCI
+    steps:
+      - OUT: nginx-image-params
+      - OUT: params-params
+
   - name: nginx-manifest-params
     type: manifest
     steps:
