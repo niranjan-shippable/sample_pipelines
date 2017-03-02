@@ -11,4 +11,4 @@ resources:
     type: params
     version:
       params:
-        MONGO_API_URL: "localhost:28017"
+        MONGO_API_URL: "localhost:28018"
