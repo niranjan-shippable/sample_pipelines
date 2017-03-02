@@ -5,7 +5,7 @@ resources:
     pointer:
       sourceName: "ankul/nginx"
     seed:
-      versionName: prod.10
+      versionName: prod.11
 
   - name: params-params
     type: params
