@@ -1,31 +1,6 @@
 jobs:  
-  - name: nginx-manifest-trace
+  - name: nginx-manifest-params
     type: manifest
     steps:
-      - IN: nginx-image-trace
-      - IN: trigger-4
-
-  - name: ddc-deploy-trace
-    type: deploy
-    steps:
-      - IN: nginx-manifest-trace
-      - IN: ddc-cluster-trace
-      - IN: params-trace
-      - TASK: managed
-
-  - name: runSh-trace
-    type: runSh
-    steps:
-      - IN: sample_java-gitRepo
-      - TASK:
-        - script: sudo apt-get install tree
-        - script: tree -F IN
-        - script: sleep 3
-    on_success:
-      - script: echo "successfully completed"
-
-  - name: sample_java_runCI
-    type: runCI
-    steps:
-      - IN: runSh-trace
-      - OUT: nginx-image-trace
+      - IN: nginx-image-params
+      - IN: params-params
