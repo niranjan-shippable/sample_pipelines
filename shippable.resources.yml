@@ -9,7 +9,7 @@ resources:
 
   - name: testprivate
     type: gitRepo
-    integration: github-subint-2
+    integration: github-subint
     pointer:
       sourceName: ankul-shippable/testprivate
       branch: "master"
