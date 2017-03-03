@@ -13,10 +13,3 @@ resources:
     pointer:
       sourceName: ankul-shippable/testprivate
       branch: "master"
-
-  - name: testprivate-2
-    type: gitRepo
-    integration: docker-subint
-    pointer:
-      sourceName: ankul-shippable/testprivate
-      branch: "master"
