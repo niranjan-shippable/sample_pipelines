@@ -1,16 +1,7 @@
 jobs:
-  - name: nginx-manifest-4-2
+  - name: manifest-trace-2a
     type: manifest
     steps:
-      - IN: nginx-image-4-2
-#      - IN: sample_java_runCI
+      - IN: nginx-trace-2a
+      - IN: nginx-trace-2b
 
-  - name: nginx-manifest-4-2a
-    type: manifest
-    steps:
-      - IN: nginx-image-4-2
-  
-#  - name: same-name
-#    type: manifest
-#    steps:
-#      - IN: nginx-image-4-2
