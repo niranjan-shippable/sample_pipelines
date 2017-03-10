@@ -3,5 +3,6 @@ jobs:
     type: manifest
     steps:
       - IN: nginx-trace-2a
+        switch: off
       - IN: nginx-trace-2b
 
