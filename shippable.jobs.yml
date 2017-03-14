@@ -9,7 +9,7 @@ jobs:
   - name: sample-runSh
     type: runSh
     steps:
-      - IN: nginx-image
+      - IN: ozan_pay_img
       - TASK:
         - script: echo OZAN_PAY_GITREPO_PATH
         - script: printenv
