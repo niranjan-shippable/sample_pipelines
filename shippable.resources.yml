@@ -7,9 +7,9 @@ resources:
     seed:
       versionName: latest
 
-  - name: testprivate
+  - name: ozan-pay_gitrepo
     type: gitRepo
-    integration: github-subint-2
+    integration: github-subint
     pointer:
       sourceName: ankul-shippable/testprivate
       branch: "master"
