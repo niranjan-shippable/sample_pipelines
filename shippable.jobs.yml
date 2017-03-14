@@ -5,3 +5,13 @@ jobs:
       - IN: nginx-image
       - IN: testprivate
 #      - IN: sample_java_runCI
+
+  - name: sample-runSh
+    type: runSh
+    steps:
+      - IN: ozan-pay_gitrepo
+      - TASK:
+        - script: echo OZAN_PAY_GITREPO_PATH
+        - script: printenv
+    flags:
+      - runSh 
