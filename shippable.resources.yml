@@ -1,24 +1,8 @@
 resources:
-  - name: nginx-image-prod81
-    type: image
-    integration: "docker-subint"
-    pointer:
-      sourceName: "ankul/nginx"
-    seed:
-      versionName: prod.8
-    flags:
-      - images 
- 
-  - name: dv-scaler
-    type: replicas
-    version:
-      count: 1
-    flags:
-      - replicas
+  - name: slack-integration
+    type: integration
+    integration: "slack-subint"
 
-#  - name: hipchat-notifications
-#    type: notification
-#    integration: "hipchat-subint"
-#    pointer:
-#      recipients:
-#        - "#Ship-aye"
+  - name: keyValuePair-integration
+    type: integration
+    integration: "keyValuePair-subint"
