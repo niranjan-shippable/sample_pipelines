@@ -6,3 +6,7 @@ resources:
   - name: keyValuePair-integration
     type: integration
     integration: "keyValuePair-subint"
+
+  - name: node-integration
+    type: integration
+    integration: "node-subint"
