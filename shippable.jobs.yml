@@ -2,6 +2,7 @@ jobs:
   - name: printenvs-runSh
     type: runSh
     steps:
+      - IN: node-integration
       - IN: slack-integration
       - IN: keyValuePair-integration
       - TASK:
