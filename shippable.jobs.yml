@@ -5,4 +5,4 @@ jobs:
       - IN: slack-integration
       - IN: keyValuePair-integration
       - TASK:
-        - script: printenv
+        - script: echo 'true'
