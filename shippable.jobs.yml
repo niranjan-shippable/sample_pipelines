@@ -1,10 +1,8 @@
 jobs:
-  - name: printenvs-runSh
+  - name: runSh-job
     type: runSh
     steps:
-      - IN: node-integration
-      - IN: slack-integration
-      - IN: keyValuePair-integration
+      - IN: key-values
       - TASK:
-        - script: echo 'true'
-        - script: printenv 
+        - script: echo $API_KEY
+        - script: echo $API_URL
