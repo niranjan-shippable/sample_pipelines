@@ -1,5 +1,5 @@
 # shippable.resources.yml
 resources:
-  - name: key-values
+  - name: node-subint
     type: integration
-    integration: "key-value-integration"
+    integration: "node-subint"
