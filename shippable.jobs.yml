@@ -2,7 +2,10 @@ jobs:
   - name: runSh-job
     type: runSh
     steps:
-      - IN: key-values
+      - IN: node-subint
       - TASK:
-        - script: echo $API_KEY
-        - script: echo $API_URL
+        - script: printenv 
+        - script: echo && echo && echo
+        - script: cat $NODESUBINT_PATH/integration.env
+        - script: echo && echo && echo
+        - script: cat $NODESUBINT_PATH/integration.json
