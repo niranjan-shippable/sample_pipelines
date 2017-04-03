@@ -2,7 +2,7 @@ jobs:
   - name: runSh-job
     type: runSh
     steps:
-      - IN: node-subint
+      - IN: irc-resource
       - TASK:
         - script: printenv 
         - script: echo && echo && echo
