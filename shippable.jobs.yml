@@ -3,10 +3,6 @@ jobs:
     type: runSh
     steps:
       - TASK:
-        - script: printenv 
-        - script: echo && echo && echo
-        - script: cat $NODESUBINT_PATH/integration.env
-        - script: echo && echo && echo
-        - script: cat $NODESUBINT_PATH/integration.json
+        - script: printenv
     on_start:
       - NOTIFY: irc-resource
