@@ -2,10 +2,11 @@ jobs:
   - name: runSh-job
     type: runSh
     steps:
-      - IN: irc-resource
       - TASK:
         - script: printenv 
         - script: echo && echo && echo
         - script: cat $NODESUBINT_PATH/integration.env
         - script: echo && echo && echo
         - script: cat $NODESUBINT_PATH/integration.json
+    on_start:
+      - NOTIFY: irc-resource
