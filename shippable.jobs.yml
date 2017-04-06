@@ -6,3 +6,9 @@ jobs:
         - script: printenv
     on_start:
       - NOTIFY: irc-resource
+    on_success:
+      - NOTIFY: irc-resource
+    on_failure:
+      - NOTIFY: irc-resource
+    always:
+      - NOTIFY: irc-resource
