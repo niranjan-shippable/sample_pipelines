@@ -5,4 +5,4 @@ resources:
     pointer:
       method: irc
       recipients: 
-        -  "chat.freenode.net#test-rc"
+        -  "webchat.irchighway.net#test-rc"
