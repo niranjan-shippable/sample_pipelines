@@ -13,4 +13,4 @@ resources:
     pointer:
       sourceName: "ankul/nginx"
     seed:
-      versionName: prod.11
+      versionName: prod.10
