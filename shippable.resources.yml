@@ -1,5 +1,5 @@
 resources:
-  - name: nginx-trace-2a
+  - name: nginx-trace-2C
     type: image
     integration: "docker-subint"
     pointer:
