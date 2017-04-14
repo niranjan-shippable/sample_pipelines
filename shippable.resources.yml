@@ -6,6 +6,8 @@ resources:
       sourceName: "library/nginx"
     seed:
       versionName: latest
+    flags:
+      - flag_1
 
   - name: nginx-trace-2b
     type: image
@@ -14,3 +16,5 @@ resources:
       sourceName: "ankul/nginx"
     seed:
       versionName: prod.11
+    flags:
+      - flag_2
