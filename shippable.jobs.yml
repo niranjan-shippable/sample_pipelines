@@ -18,5 +18,4 @@ jobs:
   - name: sample_pipelines_runCI
     type: runCI
     steps:
-      - IN: runSh-Job
       - OUT: nginx-image
