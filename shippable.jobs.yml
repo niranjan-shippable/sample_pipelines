@@ -19,3 +19,8 @@ jobs:
     type: runCI
     steps:
       - OUT: nginx-image
+
+  - name: sample_java_runCI
+    type: runCI
+    steps:
+      - IN: nginx-manifest-1
