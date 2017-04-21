@@ -23,7 +23,7 @@ resources:
     seed:
       versionName: prod.10 
 
- - name: nginx-image-3
+  - name: nginx-image-3
     type: image
     integration: "docker-subint"
     pointer:
