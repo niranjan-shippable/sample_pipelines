@@ -30,6 +30,7 @@ jobs:
     type: runSh
     steps:
       - IN: sample_java_gitRepo
+        showBuildStatus: true
       - OUT: sample_java_ciRepo
       - TASK:
         - script: sudo apt-get install tree
