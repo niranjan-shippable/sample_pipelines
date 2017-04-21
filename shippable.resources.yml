@@ -6,3 +6,10 @@ resources:
       sourceName: "ankul/nginx"
     seed:
       versionName: prod.10
+
+  - name: sample_java_gitRepo
+    type: gitRepo
+    integration: "github-subint"
+    pointer:
+      sourceName: ankul-shippable/sample_java
+      branch: "master"
