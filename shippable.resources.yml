@@ -13,3 +13,4 @@ resources:
     pointer:
       sourceName: ankul-shippable/sample_java
       branch: "master"
+      buildOnPullRequest: true
