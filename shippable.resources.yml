@@ -7,6 +7,30 @@ resources:
     seed:
       versionName: prod.10
 
+  - name: nginx-image-1
+    type: image
+    integration: "docker-subint"
+    pointer:
+      sourceName: "ankul/nginx"
+    seed:
+      versionName: prod.10
+      
+  - name: nginx-image-2
+    type: image
+    integration: "docker-subint"
+    pointer:
+      sourceName: "ankul/nginx"
+    seed:
+      versionName: prod.10 
+
+ - name: nginx-image-3
+    type: image
+    integration: "docker-subint"
+    pointer:
+      sourceName: "ankul/nginx"
+    seed:
+      versionName: prod.10 
+
   - name: sample_java_gitRepo
     type: gitRepo
     integration: "github-subint"
