@@ -38,3 +38,5 @@ resources:
       sourceName: ankul-shippable/sample_java
       branch: "master"
       buildOnPullRequest: true
+      buildOnRelease: true                   #optional
+      buildOnTagPush: true  
