@@ -29,9 +29,12 @@ jobs:
   - name: validate_gitRepo_runSh
     type: runSh
     steps:
+      - IN: nginx-image-1
       - IN: sample_java_gitRepo
         showBuildStatus: true
+      - IN: nginx-image-2
       - OUT: sample_java_ciRepo
+      - OUT: nginx-image-3
       - TASK:
         - script: sudo apt-get install tree
         - script: tree -F IN
