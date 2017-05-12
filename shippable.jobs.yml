@@ -3,63 +3,102 @@ jobs:
     type: manifest
     steps:
       - IN: nginx-image
+    flags:
+      - flag-1
+      - flag-2
   
   - name: manifest-2
     type: manifest
     steps:
       - IN: manifest-1
-  
-    - name: manifest-3
+    flags:
+      - flag-2
+      - flag-3
+ 
+  - name: manifest-3
     type: manifest
     steps:
       - IN: manifest-2
-      
+    flags:
+      - flag-3
+      - flag-4
+  
   - name: manifest-4
     type: manifest
     steps:
       - IN: manifest-3
+    flags:
+      - flag-4
+      - flag-5
   
   - name: manifest-5
     type: manifest
     steps:
       - IN: manifest-4
+    flags:
+      - flag-5
+      - flag-6
   
   - name: manifest-6
     type: manifest
     steps:
       - IN: manifest-5
-      
+    flags:
+      - flag-6
+      - flag-7
+  
   - name: manifest-7
     type: manifest
     steps:
       - IN: manifest-6
+    flags:
+      - flag-7
+      - flag-8
   
   - name: manifest-8
     type: manifest
     steps:
       - IN: manifest-7
+    flags:
+      - flag-8
+      - flag-9
   
   - name: manifest-9
     type: manifest
     steps:
       - IN: manifest-8    
+    flags:
+      - flag-9
+      - flag-10
  
   - name: manifest-7
     type: manifest
     steps:
       - IN: manifest-6
-  
+    flags:
+      - flag-10
+      - flag-11
+ 
   - name: manifest-10
     type: manifest
     steps:
       - IN: manifest-9
+    flags:
+      - flag-11
+      - flag-12
   
   - name: manifest-11
     type: manifest
     steps:
       - IN: manifest-10 
+    flags:
+      - flag-12
+      - flag-13
 
   - name: project_A_runCI
     type: runCI
     steps:
       - IN: manifest-10
+    flags:
+      - flag-13
+      - flag-14
