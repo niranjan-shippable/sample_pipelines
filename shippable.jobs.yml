@@ -58,3 +58,8 @@ jobs:
     type: manifest
     steps:
       - IN: manifest-10 
+
+  - name: project_A_runCI
+    type: runCI
+    steps:
+      - IN: manifest-10
