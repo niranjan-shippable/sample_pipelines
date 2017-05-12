@@ -1,14 +1,60 @@
 jobs:  
-  - name: nginx-manifest-trace_copy
+  - name: manifest-1
     type: manifest
     steps:
-      - IN: nginx-image-trace_copy
-      - IN: trigger-trace_copy
-
-  - name: ddc-deploy-trace_copy
-    type: deploy
+      - IN: nginx-image
+  
+  - name: manifest-2
+    type: manifest
     steps:
-      - IN: nginx-manifest-trace_copy
-      - IN: ddc-cluster-trace_copy
-      - IN: params-trace_copy
-      - TASK: managed
+      - IN: manifest-1
+  
+    - name: manifest-3
+    type: manifest
+    steps:
+      - IN: manifest-2
+      
+  - name: manifest-4
+    type: manifest
+    steps:
+      - IN: manifest-3
+  
+  - name: manifest-5
+    type: manifest
+    steps:
+      - IN: manifest-4
+  
+  - name: manifest-6
+    type: manifest
+    steps:
+      - IN: manifest-5
+      
+  - name: manifest-7
+    type: manifest
+    steps:
+      - IN: manifest-6
+  
+  - name: manifest-8
+    type: manifest
+    steps:
+      - IN: manifest-7
+  
+  - name: manifest-9
+    type: manifest
+    steps:
+      - IN: manifest-8    
+ 
+  - name: manifest-7
+    type: manifest
+    steps:
+      - IN: manifest-6
+  
+  - name: manifest-10
+    type: manifest
+    steps:
+      - IN: manifest-9
+  
+  - name: manifest-11
+    type: manifest
+    steps:
+      - IN: manifest-10 
