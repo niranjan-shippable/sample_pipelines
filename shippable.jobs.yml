@@ -1,21 +1,6 @@
 jobs:
-  - name: printenvs-runSh
-    type: runSh
+  - name: sample_java_runCI
+    type: runCI
     steps:
-      - IN: node-integration
-      - IN: slack-integration
-      - IN: keyValuePair-integration
-      - TASK:
-        - script: printenv 
-        - script: echo && echo && echo
-        - script: cat $NODEINTEGRATION_PATH/integration.env
-        - script: echo && echo && echo
-        - script: cat $NODEINTEGRATION_PATH/integration.json
-        - script: echo && echo && echo
-        - script: cat $KEYVALUEPAIRINTEGRATION_PATH/integration.env
-        - script: echo && echo && echo
-        - script: cat $KEYVALUEPAIRINTEGRATION_PATH/integration.json  
-        - script: echo && echo && echo
-        - script: cat $SLACKINTEGRATION_PATH/integration.env
-        - script: echo && echo && echo
-        - script: cat $SLACKINTEGRATION_PATH/integration.json
+      - IN: key-values
+      - IN: time-resource
