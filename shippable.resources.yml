@@ -1,12 +1,9 @@
 resources:
-  - name: slack-integration
+  - name: key-values
     type: integration
-    integration: "slack-subint"
+    integration: "key-value-integration"
 
-  - name: keyValuePair-integration
-    type: integration
-    integration: "keyValuePair-subint"
-
-  - name: node-integration
-    type: integration
-    integration: "node-subint"
+  - name: time-resource
+    type: time
+    seed:
+      interval: "*/20 * * * *"
