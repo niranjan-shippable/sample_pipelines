@@ -166,8 +166,176 @@ jobs:
       - IN: nginx-image
     flags:
       - flag-24
+
+  - name: manifest-1b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-1
+  
+  - name: manifest-2b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-2
       
+  - name: manifest-3b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-3
       
+  - name: manifest-4b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-4
+  
+  - name: manifest-5b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-5
+      
+  - name: manifest-6b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-6   
+ 
+  - name: manifest-7b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-7
+  
+  - name: manifest-8b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-8
+      
+  - name: manifest-9b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-9
+      
+  - name: manifest-10b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-10
+  
+  - name: manifest-11b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-11
+      
+  - name: manifest-12b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-12  
+ 
+  - name: manifest-13b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-13
+  
+  - name: manifest-14b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-14
+      
+  - name: manifest-15b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-15
+      
+  - name: manifest-16b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-16
+  
+  - name: manifest-17b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-17
+      
+  - name: manifest-18b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-18
+ 
+  - name: manifest-19b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-19
+  
+  - name: manifest-20b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-20
+      
+  - name: manifest-21b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-21
+      
+  - name: manifest-22b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-22
+  
+  - name: manifest-23b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-23
+      
+  - name: manifest-24b
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-24
+
+
       
   - name: manifest-final-a
     type: manifest
@@ -196,5 +364,29 @@ jobs:
       - IN: manifest-22a
       - IN: manifest-23a
       - IN: manifest-24a    
+      - IN: manifest-1b
+      - IN: manifest-2b
+      - IN: manifest-3b
+      - IN: manifest-4b
+      - IN: manifest-5b
+      - IN: manifest-6b
+      - IN: manifest-7b
+      - IN: manifest-8b
+      - IN: manifest-9b
+      - IN: manifest-10b
+      - IN: manifest-11b
+      - IN: manifest-12b
+      - IN: manifest-13b
+      - IN: manifest-14b
+      - IN: manifest-15b
+      - IN: manifest-16b
+      - IN: manifest-17b
+      - IN: manifest-18b
+      - IN: manifest-19b
+      - IN: manifest-20b
+      - IN: manifest-21b
+      - IN: manifest-22b
+      - IN: manifest-23b
+      - IN: manifest-24b  
     flags:
       - flag-final-a      
