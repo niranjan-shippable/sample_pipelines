@@ -1,104 +1,200 @@
 jobs:  
-  - name: manifest-1
+  - name: manifest-1a
     type: manifest
     steps:
       - IN: nginx-image
     flags:
       - flag-1
-      - flag-2
   
-  - name: manifest-2
+  - name: manifest-2a
     type: manifest
     steps:
-      - IN: manifest-1
+      - IN: nginx-image
     flags:
       - flag-2
-      - flag-3
- 
-  - name: manifest-3
+      
+  - name: manifest-3a
     type: manifest
     steps:
-      - IN: manifest-2
+      - IN: nginx-image
     flags:
       - flag-3
+      
+  - name: manifest-4a
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
       - flag-4
   
-  - name: manifest-4
+  - name: manifest-5a
     type: manifest
     steps:
-      - IN: manifest-3
-    flags:
-      - flag-4
-      - flag-5
-  
-  - name: manifest-5
-    type: manifest
-    steps:
-      - IN: manifest-4
+      - IN: nginx-image
     flags:
       - flag-5
-      - flag-6
-  
-  - name: manifest-6
+      
+  - name: manifest-6a
     type: manifest
     steps:
-      - IN: manifest-5
+      - IN: nginx-image
     flags:
-      - flag-6
+      - flag-6   
+ 
+  - name: manifest-7a
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
       - flag-7
   
-  - name: manifest-7
+  - name: manifest-8a
     type: manifest
     steps:
-      - IN: manifest-6
-    flags:
-      - flag-7
-      - flag-8
-  
-  - name: manifest-8
-    type: manifest
-    steps:
-      - IN: manifest-7
+      - IN: nginx-image
     flags:
       - flag-8
-      - flag-9
-  
-  - name: manifest-9
+      
+  - name: manifest-9a
     type: manifest
     steps:
-      - IN: manifest-8    
+      - IN: nginx-image
     flags:
       - flag-9
-      - flag-10
- 
-  - name: manifest-7
+      
+  - name: manifest-10a
     type: manifest
     steps:
-      - IN: manifest-6
+      - IN: nginx-image
     flags:
       - flag-10
-      - flag-11
- 
-  - name: manifest-10
-    type: manifest
-    steps:
-      - IN: manifest-9
-    flags:
-      - flag-11
-      - flag-12
   
-  - name: manifest-11
+  - name: manifest-11a
     type: manifest
     steps:
-      - IN: manifest-10 
+      - IN: nginx-image
     flags:
-      - flag-12
-      - flag-13
-
-  - name: project_A_runCI
-    type: runCI
+      - flag-11
+      
+  - name: manifest-12a
+    type: manifest
     steps:
-      - IN: manifest-10
+      - IN: nginx-image
+    flags:
+      - flag-12  
+ 
+  - name: manifest-13a
+    type: manifest
+    steps:
+      - IN: nginx-image
     flags:
       - flag-13
+  
+  - name: manifest-14a
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
       - flag-14
+      
+  - name: manifest-15a
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-15
+      
+  - name: manifest-16a
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-16
+  
+  - name: manifest-17a
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-17
+      
+  - name: manifest-18a
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-18
+ 
+  - name: manifest-19a
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-19
+  
+  - name: manifest-20a
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-20
+      
+  - name: manifest-21a
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-21
+      
+  - name: manifest-22a
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-22
+  
+  - name: manifest-23a
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-23
+      
+  - name: manifest-24a
+    type: manifest
+    steps:
+      - IN: nginx-image
+    flags:
+      - flag-24
+      
+      
+      
+  - name: manifest-final-a
+    type: manifest
+    steps:
+      - IN: manifest-1a
+      - IN: manifest-2a
+      - IN: manifest-3a
+      - IN: manifest-4a
+      - IN: manifest-5a
+      - IN: manifest-6a
+      - IN: manifest-7a
+      - IN: manifest-8a
+      - IN: manifest-9a
+      - IN: manifest-10a
+      - IN: manifest-11a
+      - IN: manifest-12a
+      - IN: manifest-13a
+      - IN: manifest-14a
+      - IN: manifest-15a
+      - IN: manifest-16a
+      - IN: manifest-17a
+      - IN: manifest-18a
+      - IN: manifest-19a
+      - IN: manifest-20a
+      - IN: manifest-21a
+      - IN: manifest-22a
+      - IN: manifest-23a
+      - IN: manifest-24a    
+    flags:
+      - flag-final-a      
