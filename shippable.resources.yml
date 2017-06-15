@@ -1,5 +1,5 @@
 resources:
-  - name: nginx-image-3
+  - name: nginx-image-new
     type: image
     integration: "docker-subint"
     pointer:
@@ -7,7 +7,7 @@ resources:
     seed:
       versionName: prod.10
 
-  - name: ddc-cluster-3
+  - name: ddc-cluster-new
     type: cluster
     integration: "ddc-subint"
     pointer:
