@@ -1,5 +1,5 @@
 triggers:
-   - name: trigger
+   - name: trigger_new
      type: trigger
      version:
        counter: 1
