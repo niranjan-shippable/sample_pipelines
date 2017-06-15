@@ -10,9 +10,7 @@ jobs:
       - IN: sample_java_ciRepo
       - IN: nginx-manifest-1
       - TASK:
-        - script: sudo apt-get install tree
-        - script: tree -F IN
-        - script: sleep 3
+        - script: echo "well, hello there!"
     on_success:
       - script: echo "successfully completed"
 
