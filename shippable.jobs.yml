@@ -43,8 +43,7 @@ jobs:
       
   - name: runSh-main
     type: runSh
-    steps:
-      - IN: base_manifest    
+    steps: 
       - IN: failed_manifest 
       - IN: skipped_manifest 
       - IN: cancelled_runSh 
