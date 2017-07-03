@@ -50,7 +50,8 @@ jobs:
       - IN: inconsistent_manifest 
       - IN: unbuilt_manifest       
       - IN: success_manifest       
-      - IN: sample_java_runCI 
+      - IN: sample_java_runCI
+      - IN: sample_node_runCI      
       - TASK:
         - script: echo "true"
     on_success:
