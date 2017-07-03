@@ -1,57 +1,10 @@
 jobs:
-  - name: base_manifest
+  - name: manifest_test_1
     type: manifest
     steps:
-      - IN: nginx_prod_6
+      - IN: success_manifest
 
-  - name: failed_manifest
+  - name: manifest_test_2
     type: manifest
     steps:
-      - IN: base_manifest
-      
-      
-  - name: skipped_manifest
-    type: manifest
-    steps:
-      - IN: nginx_prod_6      
-      
-  - name: cancelled_runSh
-    type: runSh
-    steps:
-      - TASK:
-        - script: sudo apt-get install tree
-        - script: tree -F IN
-        - script: sleep 60
-    on_success:
-      - script: echo "successfully completed"      
-      
-  - name: inconsistent_manifest
-    type: manifest
-    steps:
-      - IN: nginx_prod_7  
-      
-  - name: unbuilt_manifest
-    type: manifest
-    steps:
-      - IN: nginx_prod_6       
-      
-  - name: success_manifest
-    type: manifest
-    steps:
-      - IN: nginx_prod_6     
-      
-      
-  - name: runSh-main
-    type: runSh
-    steps: 
-      - IN: failed_manifest 
-      - IN: skipped_manifest 
-      - IN: cancelled_runSh 
       - IN: inconsistent_manifest 
-      - IN: unbuilt_manifest       
-      - IN: success_manifest       
-      - IN: sample_java_runCI 
-      - TASK:
-        - script: echo "true"
-    on_success:
-      - script: echo "successfully completed"           
