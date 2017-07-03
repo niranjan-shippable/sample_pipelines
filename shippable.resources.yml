@@ -22,3 +22,11 @@ resources:
       sourceName: "ankul/nginx"
     seed:
       versionName: prod.7
+
+  - name: nginx_prod_9
+    type: image
+    integration: docker-subint-2
+    pointer:
+      sourceName: "ankul/nginx"
+    seed:
+      versionName: prod.9
