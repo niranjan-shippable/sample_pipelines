@@ -45,6 +45,7 @@ jobs:
     type: runSh
     steps: 
       - IN: nginx_prod_8
+      - OUT: nginx_prod_9      
       - IN: failed_manifest 
       - IN: skipped_manifest 
       - IN: cancelled_runSh 
