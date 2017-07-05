@@ -58,3 +58,24 @@ jobs:
         - script: echo "true"
     on_success:
       - script: echo "successfully completed"           
+
+  - name: runSh_1
+    type: runSh
+    steps:
+      - TASK:
+        - script: sudo apt-get install tree
+        - script: tree -F IN
+        - script: sleep 120
+    on_success:
+      - script: echo "successfully completed"      
+      
+  - name: runSh_2
+    type: runSh
+    steps:
+      - IN: runSh_1
+      - TASK:
+        - script: sudo apt-get install tree
+        - script: tree -F IN
+        - script: sleep 120
+    on_success:
+      - script: echo "successfully completed"            
