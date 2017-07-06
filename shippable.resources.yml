@@ -1,5 +1,5 @@
 resources:
-  - name: nginx-image
+  - name: nginx-image-10
     type: image
     integration: "docker-subint"
     pointer:
