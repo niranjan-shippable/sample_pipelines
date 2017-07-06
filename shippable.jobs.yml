@@ -2,7 +2,7 @@ jobs:
   - name: manifest-1a
     type: manifest
     steps:
-      - IN: nginx-image
+      - IN: nginx-image-10
     flags:
       - flag-1
   
@@ -16,7 +16,7 @@ jobs:
   - name: manifest-1b
     type: manifest
     steps:
-      - IN: nginx-image
+      - IN: nginx-image-10
     flags:
       - flag-3
       
@@ -30,7 +30,7 @@ jobs:
   - name: manifest-1c
     type: manifest
     steps:
-      - IN: nginx-image
+      - IN: nginx-image-10
     flags:
       - flag-5
       
@@ -44,7 +44,7 @@ jobs:
   - name: manifest-1d
     type: manifest
     steps:
-      - IN: nginx-image
+      - IN: nginx-image-10
     flags:
       - flag-7
   
