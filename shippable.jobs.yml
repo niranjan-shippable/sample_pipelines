@@ -1,8 +1,15 @@
-jobs:  
-  - name: manifest-1a
+jobs: 
+  - name: manifest-0a
     type: manifest
     steps:
       - IN: nginx-image-10
+    flags:
+      - flag-1
+
+  - name: manifest-1a
+    type: manifest
+    steps:
+      - IN: manifest-0a
     flags:
       - flag-1
   
