@@ -1,63 +1,81 @@
 jobs: 
-  - name: manifest-0a
-    type: manifest
+  - name: runSh_1a
+    type: runSh
     steps:
-      - IN: nginx-image-10
-    flags:
-      - flag-1
+      - IN: nginx-image-11
+      - TASK:
+        - script: sleep 10
+    on_success:
+      - script: echo "successfully completed"      
 
-  - name: manifest-1a
-    type: manifest
+  - name: runSh_1b
+    type: runSh
     steps:
-      - IN: manifest-0a
-    flags:
-      - flag-1
-  
-  - name: manifest-2a
-    type: manifest
-    steps:
-      - IN: manifest-1a
-    flags:
-      - flag-2
+      - IN: runSh_1a
+      - TASK:
+        - script: sleep 10
+    on_success:
+      - script: echo "successfully completed"    
       
-  - name: manifest-1b
-    type: manifest
+  - name: runSh_1c
+    type: runSh
     steps:
-      - IN: nginx-image-10
-    flags:
-      - flag-3
+      - IN: runSh_1b
+      - TASK:
+        - script: sleep 10
+    on_success:
+      - script: echo "successfully completed"      
       
-  - name: manifest-2b
-    type: manifest
+  - name: runSh_2a
+    type: runSh
     steps:
-      - IN: manifest-1b
-    flags:
-      - flag-4
-  
-  - name: manifest-1c
-    type: manifest
+      - IN: nginx-image-11
+      - TASK:
+        - script: sleep 10
+    on_success:
+      - script: echo "successfully completed"      
+
+  - name: runSh_2b
+    type: runSh
     steps:
-      - IN: nginx-image-10
-    flags:
-      - flag-5
+      - IN: runSh_2a
+      - TASK:
+        - script: sleep 10
+    on_success:
+      - script: echo "successfully completed"   
       
-  - name: manifest-2c
-    type: manifest
+  - name: runSh_3a
+    type: runSh
     steps:
-      - IN: manifest-1c
-    flags:
-      - flag-6   
- 
-  - name: manifest-1d
-    type: manifest
+      - IN: nginx-image-11
+      - TASK:
+        - script: sleep 10
+    on_success:
+      - script: echo "successfully completed"      
+
+  - name: runSh_3b
+    type: runSh
     steps:
-      - IN: nginx-image-10
-    flags:
-      - flag-7
-  
-  - name: manifest-2d
-    type: manifest
+      - IN: runSh_3a
+      - TASK:
+        - script: sleep 10
+    on_success:
+      - script: echo "successfully completed"      
+      
+  - name: runSh_4a
+    type: runSh
     steps:
-      - IN: manifest-1d
-    flags:
-      - flag-8
+      - IN: nginx-image-11
+      - TASK:
+        - script: sleep 10
+    on_success:
+      - script: echo "successfully completed"      
+
+  - name: runSh_4b
+    type: runSh
+    steps:
+      - IN: runSh_4a
+      - TASK:
+        - script: sleep 10
+    on_success:
+      - script: echo "successfully completed"         
