@@ -1,5 +1,0 @@
-triggers:
-   - name: trigger-trace_copy
-     type: trigger
-     version:
-       counter: 1
