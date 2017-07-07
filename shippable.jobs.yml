@@ -7,6 +7,6 @@ jobs:
         - script: sudo apt-get install tree
         - script: tree -F IN
         - script: echo "prinitng KEY"
-        - echo $KEY
+        - script: echo $KEY
     on_success:
       - script: echo "successfully completed"
