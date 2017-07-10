@@ -18,7 +18,7 @@ jobs:
   - name: runSh_left
     type: runSh
     steps:
-      -IN: runSh_INs
+      - IN: runSh_INs
       - TASK:
         - script: sudo apt-get install tree
         - script: tree -F IN
