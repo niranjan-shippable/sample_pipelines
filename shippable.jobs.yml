@@ -1,4 +1,13 @@
 jobs:
+  - name: runSh_random
+    type: runSh
+    steps:
+      - TASK:
+        - script: sleep 1
+        - script: sleep 2
+    on_success:
+      - script: echo "successfully completed"   
+ 
   - name: runSh_INs
     type: runSh
     steps:
