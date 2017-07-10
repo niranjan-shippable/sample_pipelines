@@ -48,3 +48,20 @@ jobs:
         - script: sleep 6
     on_success:
       - script: echo "successfully completed"    
+      
+  - name: runSh_A
+    type: runSh
+    steps:
+      - TASK:
+        - script: sleep 1
+    on_success:
+      - script: echo "successfully completed"  
+      
+  - name: runSh_B
+    type: runSh
+    steps:
+      - IN: runSh_A
+      - TASK:
+        - script: sleep 1
+    on_success:
+      - script: echo "successfully completed"          
