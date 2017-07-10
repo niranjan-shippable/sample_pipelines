@@ -1,34 +1,23 @@
 jobs:
-  - name: runSh_random
-    type: runSh
+  - name: trigger_center
+    type: manifest
     steps:
-      - TASK:
-        - script: sleep 1
-        - script: sleep 2
-    on_success:
-      - script: echo "successfully completed"   
- 
-  - name: runSh_INs
-    type: runSh
-    steps:
-      - TASK:
-        - script: sleep 1
-        - script: sleep 2
-    on_success:
-      - script: echo "successfully completed"   
-   
-  - name: runSh_OUTs
-    type: runSh
-    steps:
-      - TASK:
-        - script: sleep 2
-    on_success:
-      - script: echo "successfully completed"      
+      - IN: nginx_image
       
+  - name: trigger_INs
+    type: manifest
+    steps:
+      - IN: nginx_image      
+ 
+  - name: trigger_OUTs
+    type: manifest
+    steps:
+      - IN: nginx_image  
+
   - name: runSh_left
     type: runSh
     steps:
-      - IN: runSh_INs
+      - IN: trigger_INs
       - TASK:
         - script: sudo apt-get install tree
         - script: tree -F IN
@@ -39,6 +28,7 @@ jobs:
   - name: runSh_center
     type: runSh
     steps:
+      - IN: trigger_center
       - IN: runSh_left
       - IN: sample_node_runCI
       - TASK:
@@ -51,7 +41,7 @@ jobs:
   - name: runSh_right
     type: runSh
     steps:
-      - IN: runSh_OUTs
+      - IN: trigger_OUTs
       - IN: runSh_center
       - TASK:
         - script: sudo apt-get install tree
@@ -63,13 +53,13 @@ jobs:
   - name: sample_java_runCI
     type: runCI
     steps:
-      - IN: runSh_OUTs
+      - IN: trigger_OUTs
       - IN: runSh_center
  
   - name: sample_node_runCI
     type: runCI
     steps:
-      - IN: runSh_INs
+      - IN: trigger_INs
 
   - name: runSh_verify_commit_message
     type: runSh
