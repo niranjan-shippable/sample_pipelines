@@ -1,0 +1,7 @@
+resources:
+  - name: pipelines_dry_run_gitRepo
+    type: gitRepo
+    integration: github-subint
+    pointer:
+      sourceName: ankul-shippable/pipelines_dry_run
+      branch: "master"
