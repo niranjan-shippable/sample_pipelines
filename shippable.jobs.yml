@@ -66,7 +66,7 @@ jobs:
       - IN: runSh_OUTs
       - IN: runSh_center
  
-   - name: sample_node_runCI
+  - name: sample_node_runCI
     type: runCI
     steps:
       - IN: runSh_INs
@@ -98,4 +98,4 @@ jobs:
       - TASK:
         - script: sleep 60
     on_success:
-      - script: echo "successfully completed"          
+      - script: echo "successfully completed"   
