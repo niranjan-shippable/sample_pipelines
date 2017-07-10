@@ -1,13 +1,38 @@
 jobs:
-  - name: nginx-manifest-dcl
-    type: manifest
+  - name: runSh_left
+    type: runSh
     steps:
-      - IN: nginx-image-dcl
-      - TASK: managed
+      - TASK:
+        - script: sudo apt-get install tree
+        - script: tree -F IN
+        - script: sleep 60
+    on_success:
+      - script: echo "successfully completed"      
 
-  - name: dcl-deploy
-    type: deploy
+  - name: runSh_center
+    type: runSh
     steps:
-      - IN: nginx-manifest-dcl
-      - IN: dcl-cluster-dcl
-      - TASK: managed
+      - IN: runSh_left
+      - IN: sample_node_runCI
+      - TASK:
+        - script: sudo apt-get install tree
+        - script: tree -F IN
+        - script: sleep 60
+    on_success:
+      - script: echo "successfully completed"    
+
+  - name: runSh_right
+    type: runSh
+    steps:
+      - IN: runSh_center
+      - TASK:
+        - script: sudo apt-get install tree
+        - script: tree -F IN
+        - script: sleep 60
+    on_success:
+      - script: echo "successfully completed"  
+
+  - name: sample_java_runCI
+    type: runCI
+    steps:
+      - IN: runSh_center
