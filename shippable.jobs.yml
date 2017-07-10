@@ -1,7 +1,24 @@
 jobs:
+  - name: runSh_INs
+    type: runSh
+    steps:
+      - TASK:
+        - script: sleep 1
+    on_success:
+      - script: echo "successfully completed"   
+   
+  - name: runSh_OUTs
+    type: runSh
+    steps:
+      - TASK:
+        - script: sleep 1
+    on_success:
+      - script: echo "successfully completed"      
+      
   - name: runSh_left
     type: runSh
     steps:
+      -IN: runSh_INs
       - TASK:
         - script: sudo apt-get install tree
         - script: tree -F IN
@@ -24,6 +41,7 @@ jobs:
   - name: runSh_right
     type: runSh
     steps:
+      - IN: runSh_OUTs
       - IN: runSh_center
       - TASK:
         - script: sudo apt-get install tree
@@ -35,7 +53,13 @@ jobs:
   - name: sample_java_runCI
     type: runCI
     steps:
+      - IN: runSh_OUTs
       - IN: runSh_center
+ 
+   - name: sample_node_runCI
+    type: runCI
+    steps:
+      - IN: runSh_INs
 
   - name: runSh_verify_commit_message
     type: runSh
