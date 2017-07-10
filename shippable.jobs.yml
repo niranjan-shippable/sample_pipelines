@@ -87,7 +87,7 @@ jobs:
     type: runSh
     steps:
       - TASK:
-        - script: sleep 1
+        - script: sleep 60
     on_success:
       - script: echo "successfully completed"  
       
@@ -96,6 +96,6 @@ jobs:
     steps:
       - IN: runSh_A
       - TASK:
-        - script: sleep 1
+        - script: sleep 60
     on_success:
       - script: echo "successfully completed"          
