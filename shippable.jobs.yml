@@ -36,3 +36,15 @@ jobs:
     type: runCI
     steps:
       - IN: runSh_center
+
+  - name: runSh_verify_commit_message
+    type: runSh
+    steps:
+      - IN: pipelines_dry_run_gitRepo
+      - OUT: pipelines_dry_run_ciRepo
+      - TASK:
+        - script: sudo apt-get install tree
+        - script: tree -F IN
+        - script: sleep 6
+    on_success:
+      - script: echo "successfully completed"    
