@@ -1,5 +1,0 @@
-triggers:
-   - name: trigger-dcl
-     type: trigger
-     version:
-       counter: 1
