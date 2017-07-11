@@ -78,8 +78,9 @@ jobs:
     type: runCI
     steps:
       - IN: trigger_pipeline_dry_run 
-      - IN: inconsistent_runSh       
-
+      - IN: inconsistent_runSh
+      - IN: sample_java_runCI
+  
   - name: runSh_verify_commit_message
     type: runSh
     steps:
