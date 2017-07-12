@@ -16,7 +16,7 @@ resources:
 
   - name: image_INs
     type: image
-    integration: "docker-subint"
+    integration: "docker-subint-4321"
     pointer:
       sourceName: "ankul/nginx"
     seed:
@@ -24,7 +24,7 @@ resources:
 
   - name: image_center
     type: image
-    integration: "docker-subint"
+    integration: "docker-subint-4321"
     pointer:
       sourceName: "ankul/nginx"
     seed:
@@ -32,7 +32,7 @@ resources:
       
   - name: image_OUTs
     type: image
-    integration: "docker-subint"
+    integration: "docker-subint-4321"
     pointer:
       sourceName: "ankul/nginx"
     seed:
