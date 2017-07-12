@@ -81,18 +81,18 @@ jobs:
       - IN: inconsistent_runSh
       - IN: sample_java_runCI
   
-#  - name: build_test
-#    type: runSh
-#    steps:
-#      - IN: trigger_pipeline_dry_run 
-#      - IN: inconsistent_runSh
-#      - IN: sample_java_runCI
-#      - TASK:
-#        - script: sudo apt-get install tree
-#        - script: tree -F IN
-#        - script: sleep 1
-#    on_success:
-#      - script: echo "successfully completed"    
+  - name: build_test
+    type: runSh
+    steps:
+      - IN: trigger_pipeline_dry_run 
+      - IN: inconsistent_runSh
+      - IN: sample_java_runCI
+      - TASK:
+        - script: sudo apt-get install tree
+        - script: tree -F IN
+        - script: sleep 1
+    on_success:
+      - script: echo "successfully completed"    
   
   - name: runSh_verify_commit_message
     type: runSh
