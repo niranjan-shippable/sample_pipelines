@@ -13,3 +13,27 @@ resources:
       sourceName: "ankul/nginx"
     seed:
       versionName: prod.10
+
+  - name: image_INs
+    type: image
+    integration: "docker-subint-4321"
+    pointer:
+      sourceName: "ankul/nginx"
+    seed:
+      versionName: prod.10
+
+  - name: image_center
+    type: image
+    integration: "docker-subint-4321"
+    pointer:
+      sourceName: "ankul/nginx"
+    seed:
+      versionName: prod.10
+      
+  - name: image_OUTs
+    type: image
+    integration: "docker-subint-4321"
+    pointer:
+      sourceName: "ankul/nginx"
+    seed:
+      versionName: prod.10      
