@@ -18,6 +18,7 @@ jobs:
     type: runSh
     steps:
       - IN: trigger_INs
+      - IN: image_INs
       - TASK:
         - script: sudo apt-get install tree
         - script: tree -F IN
@@ -29,6 +30,7 @@ jobs:
     type: runSh
     steps:
       - IN: trigger_center
+      - IN: image_center
       - IN: runSh_left
       - IN: sample_node_runCI
       - TASK:
@@ -42,6 +44,7 @@ jobs:
     type: runSh
     steps:
       - IN: trigger_OUTs
+      - IN: image_OUTs
       - IN: runSh_center
       - TASK:
         - script: sudo apt-get install tree
@@ -54,12 +57,14 @@ jobs:
     type: runCI
     steps:
       - IN: trigger_OUTs
+      - IN: image_OUTs
       - IN: runSh_center
  
   - name: sample_node_runCI
     type: runCI
     steps:
       - IN: trigger_INs
+      - IN: image_INs
       
   - name: trigger_pipeline_dry_run
     type: manifest
@@ -85,6 +90,7 @@ jobs:
     type: runCI
     steps:
       - IN: trigger_center
+      - IN: image_center
       - IN: runSh_left
       - IN: sample_node_runCI
 
