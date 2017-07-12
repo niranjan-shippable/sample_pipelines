@@ -86,13 +86,13 @@ jobs:
       - IN: inconsistent_runSh
       - IN: sample_java_runCI
 
-  - name: unhooked_project_runCI
-    type: runCI
-    steps:
-      - IN: trigger_center
-      - IN: image_center
-      - IN: runSh_left
-      - IN: sample_node_runCI
+#  - name: unhooked_project_runCI
+#    type: runCI
+#    steps:
+#      - IN: trigger_center
+#      - IN: image_center
+#      - IN: runSh_left
+#      - IN: sample_node_runCI
 
   - name: build_test
     type: runSh
