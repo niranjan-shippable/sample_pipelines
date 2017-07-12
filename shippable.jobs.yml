@@ -84,9 +84,9 @@ jobs:
   - name: unhooked_project_runCI
     type: runCI
     steps:
-      - IN: trigger_pipeline_dry_run 
-      - IN: inconsistent_runSh
-      - IN: sample_java_runCI
+      - IN: trigger_center
+      - IN: runSh_left
+      - IN: sample_node_runCI
 
   - name: build_test
     type: runSh
