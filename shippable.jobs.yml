@@ -7,10 +7,10 @@ jobs:
   - name: sample_node_runCI
     type: runCI
     steps:
-      - IN: image_INs    
+      - IN: image_INs
+      - IN: trigger_center      
 
   - name: unhooked_project_runCI
     type: runCI
     steps:
-      - IN: trigger_center
       - IN: sample_node_runCI
