@@ -1,11 +1,4 @@
 resources:
-  - name: pipelines_dry_run_gitRepo
-    type: gitRepo
-    integration: github-subint
-    pointer:
-      sourceName: ankul-shippable/pipelines_dry_run
-      branch: "master"
-
   - name: nginx_image
     type: image
     integration: "docker-subint"
@@ -13,27 +6,3 @@ resources:
       sourceName: "ankul/nginx"
     seed:
       versionName: prod.10
-
-  - name: image_INs
-    type: image
-    integration: "docker-subint"
-    pointer:
-      sourceName: "ankul/nginx"
-    seed:
-      versionName: prod.10
-
-  - name: image_center
-    type: image
-    integration: "docker-subint"
-    pointer:
-      sourceName: "ankul/nginx"
-    seed:
-      versionName: prod.10
-      
-  - name: image_OUTs
-    type: image
-    integration: "docker-subint"
-    pointer:
-      sourceName: "ankul/nginx"
-    seed:
-      versionName: prod.10      
