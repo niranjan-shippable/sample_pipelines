@@ -1,137 +1,71 @@
 jobs:
-  - name: trigger_center
+  - name: trigger_runCI_0
     type: manifest
     steps:
       - IN: nginx_image
-      
-  - name: trigger_INs
+
+  - name: trigger_runCI_1
     type: manifest
     steps:
-      - IN: nginx_image      
- 
-  - name: trigger_OUTs
+      - IN: nginx_image
+
+  - name: trigger_runCI_2
     type: manifest
     steps:
-      - IN: nginx_image  
+      - IN: nginx_image
 
-  - name: runSh_left
-    type: runSh
-    steps:
-      - IN: trigger_INs
-      - IN: image_INs
-      - TASK:
-        - script: sudo apt-get install tree
-        - script: tree -F IN
-        - script: sleep 60
-    on_success:
-      - script: echo "successfully completed"      
-
-  - name: runSh_center
-    type: runSh
-    steps:
-      - IN: trigger_center
-      - IN: image_center
-      - IN: runSh_left
-      - IN: sample_node_runCI
-      - TASK:
-        - script: sudo apt-get install tree
-        - script: tree -F IN
-        - script: sleep 60
-    on_success:
-      - script: echo "successfully completed"    
-
-  - name: runSh_right
-    type: runSh
-    steps:
-      - IN: trigger_OUTs
-      - IN: image_OUTs
-      - IN: runSh_center
-      - TASK:
-        - script: sudo apt-get install tree
-        - script: tree -F IN
-        - script: sleep 60
-    on_success:
-      - script: echo "successfully completed"  
-
-  - name: sample_java_runCI
-    type: runCI
-    steps:
-      - IN: trigger_OUTs
-      - IN: image_OUTs
-      - IN: runSh_center
- 
   - name: sample_node_runCI
     type: runCI
     steps:
-      - IN: trigger_INs
-      - IN: image_INs
-      
-  - name: trigger_pipeline_dry_run
-    type: manifest
-    steps:
-      - IN: nginx_image      
-
-  - name: inconsistent_runSh
-    type: runSh
-    steps:
-      - TASK:
-        - script: sleep 60
-    on_success:
-      - script: echo "successfully completed"  
-
-  - name: pipelines_dry_run_runCI
-    type: runCI
-    steps:
-      - IN: trigger_pipeline_dry_run 
-      - IN: inconsistent_runSh
-      - IN: sample_java_runCI
+      - IN: trigger_runCI_0
 
   - name: unhooked_project_runCI
     type: runCI
     steps:
-      - IN: trigger_center
-      - IN: image_center
-      - IN: runSh_left
+      - IN: trigger_runCI_1
       - IN: sample_node_runCI
 
-  - name: build_test
+  - name: sample_java_runCI
+    type: runCI
+    steps:
+      - IN: trigger_runCI_2
+      - IN: unhooked_project_runCI
+
+  - name: trigger_runSh_0
+    type: manifest
+    steps:
+      - IN: nginx_image
+
+  - name: trigger_runSh1
+    type: manifest
+    steps:
+      - IN: nginx_image
+
+  - name: trigger_runSh_2
+    type: manifest
+    steps:
+      - IN: nginx_image
+
+  - name: runSh_0
     type: runSh
     steps:
-      - IN: trigger_pipeline_dry_run 
-      - IN: inconsistent_runSh
-      - IN: sample_java_runCI
-      - TASK:
-        - script: sudo apt-get install tree
-        - script: tree -F IN
-        - script: sleep 1
-    on_success:
-      - script: echo "successfully completed"    
-  
-  - name: runSh_verify_commit_message
-    type: runSh
-    steps:
-      - IN: pipelines_dry_run_gitRepo
-      - OUT: pipelines_dry_run_ciRepo
-      - TASK:
-        - script: sudo apt-get install tree
-        - script: tree -F IN
-        - script: sleep 6
-    on_success:
-      - script: echo "successfully completed"    
-      
-  - name: runSh_A
-    type: runSh
-    steps:
+      - IN: trigger_runSh_0
       - TASK:
         - script: sleep 60
-    on_success:
-      - script: echo "successfully completed"  
-      
-  - name: runSh_B
+
+
+  - name: runSh_1
     type: runSh
     steps:
-      - IN: runSh_A
+      - IN: trigger_runSh_1
+      - IN: runSh_0
       - TASK:
         - script: sleep 60
-    on_success:
-      - script: echo "successfully completed"   
+
+  - name: runSh_2
+    type: runSh
+    steps:
+      - IN: trigger_runSh_2
+      - IN: runSh_1
+      - TASK:
+        - script: sleep 60
