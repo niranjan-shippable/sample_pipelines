@@ -36,7 +36,7 @@ jobs:
     steps:
       - IN: nginx_image
 
-  - name: trigger_runSh1
+  - name: trigger_runSh_1
     type: manifest
     steps:
       - IN: nginx_image
