@@ -30,6 +30,12 @@ jobs:
     steps:
       - IN: trigger_runCI_2
       - IN: unhooked_project_runCI
+      
+  - name: matrix_test
+    type: manifest
+    steps:
+      - IN: nginx_image
+      - IN: sample_java_runCI
 
   - name: trigger_runSh_0
     type: manifest
@@ -51,7 +57,7 @@ jobs:
     steps:
       - IN: trigger_runSh_0
       - TASK:
-        - script: sleep 60
+        - script: sleep 10
 
 
   - name: runSh_1
@@ -60,7 +66,7 @@ jobs:
       - IN: trigger_runSh_1
       - IN: runSh_0
       - TASK:
-        - script: sleep 60
+        - script: sleep 10
 
   - name: runSh_2
     type: runSh
@@ -68,4 +74,4 @@ jobs:
       - IN: trigger_runSh_2
       - IN: runSh_1
       - TASK:
-        - script: sleep 60
+        - script: sleep 10
