@@ -1,5 +1,21 @@
 resources:
-  - name: nginx_image
+  - name: nginx_image_1
+    type: image
+    integration: "docker-subint"
+    pointer:
+      sourceName: "ankul/nginx"
+    seed:
+      versionName: prod.10
+
+  - name: nginx_image_2
+    type: image
+    integration: "docker-subint"
+    pointer:
+      sourceName: "ankul/nginx"
+    seed:
+      versionName: prod.10
+
+  - name: nginx_image_3
     type: image
     integration: "docker-subint"
     pointer:
