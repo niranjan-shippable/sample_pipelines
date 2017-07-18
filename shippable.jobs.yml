@@ -35,7 +35,7 @@ jobs:
     type: runSh
     steps:
       - IN: trigger_runSh_2
-      - IN: nginx_imagE_3
+      - IN: nginx_image_3
       - IN: runSh_1
       - TASK:
         - script: sleep 60
