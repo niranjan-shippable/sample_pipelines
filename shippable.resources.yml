@@ -9,7 +9,7 @@ resources:
     flags:
       - image_flag
 
-- name: nginx_image_1
+  - name: nginx_image_1
     type: image
     integration: "docker-subint"
     pointer:
