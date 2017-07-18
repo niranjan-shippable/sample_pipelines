@@ -1,42 +1,4 @@
 jobs:
-  - name: trigger_runCI_0
-    type: manifest
-    steps:
-      - IN: nginx_image
-
-  - name: trigger_runCI_1
-    type: manifest
-    steps:
-      - IN: nginx_image
-
-  - name: trigger_runCI_2
-    type: manifest
-    steps:
-      - IN: nginx_image
-
-  - name: sample_node_runCI
-    type: runCI
-    steps:
-      - IN: trigger_runCI_0
-
-  - name: unhooked_project_runCI
-    type: runCI
-    steps:
-      - IN: trigger_runCI_1
-      - IN: sample_node_runCI
-
-  - name: sample_java_runCI
-    type: runCI
-    steps:
-      - IN: trigger_runCI_2
-      - IN: unhooked_project_runCI
-      
-  - name: matrix_test
-    type: manifest
-    steps:
-      - IN: nginx_image
-      - IN: sample_java_runCI
-
   - name: trigger_runSh_0
     type: manifest
     steps:
@@ -56,6 +18,7 @@ jobs:
     type: runSh
     steps:
       - IN: trigger_runSh_0
+      - IN: nginx_image_1
       - TASK:
         - script: sleep 60
 
@@ -64,6 +27,7 @@ jobs:
     type: runSh
     steps:
       - IN: trigger_runSh_1
+      - IN: nginx_image_2
       - IN: runSh_0
       - TASK:
         - script: sleep 60
@@ -72,6 +36,7 @@ jobs:
     type: runSh
     steps:
       - IN: trigger_runSh_2
+      - IN: nginx_imagE_3
       - IN: runSh_1
       - TASK:
         - script: sleep 60
