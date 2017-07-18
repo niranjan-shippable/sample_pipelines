@@ -6,6 +6,8 @@ resources:
       sourceName: "ankul/nginx"
     seed:
       versionName: prod.10
+    flags:
+      - image_flag
 
 - name: nginx_image_1
     type: image
