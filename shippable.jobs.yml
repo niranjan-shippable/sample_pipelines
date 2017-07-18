@@ -22,7 +22,6 @@ jobs:
       - TASK:
         - script: sleep 60
 
-
   - name: runSh_1
     type: runSh
     steps:
