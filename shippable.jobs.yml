@@ -3,6 +3,8 @@ jobs:
     type: manifest
     steps:
       - IN: nginx_image
+    flags:
+      - trigger_runSh_4      
 
   - name: trigger_runSh_0
     type: manifest
@@ -13,11 +15,15 @@ jobs:
     type: manifest
     steps:
       - IN: nginx_image
+    flags:
+      - trigger_runSh_1  
 
   - name: trigger_runSh_2
     type: manifest
     steps:
       - IN: nginx_image
+    flags:
+      - trigger_runSh_2
 
   - name: runSh_0
     type: runSh
@@ -26,6 +32,8 @@ jobs:
       - IN: nginx_image_1
       - TASK:
         - script: sleep 60
+    flags:
+      - runSh_0
 
   - name: runSh_1
     type: runSh
@@ -35,6 +43,8 @@ jobs:
       - IN: runSh_0
       - TASK:
         - script: sleep 60
+    flags:
+      - runSh_1
 
   - name: runSh_2
     type: runSh
@@ -44,3 +54,5 @@ jobs:
       - IN: runSh_1
       - TASK:
         - script: sleep 60
+    flags:
+      - runSh_2
