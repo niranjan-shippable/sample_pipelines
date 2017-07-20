@@ -10,4 +10,3 @@ jobs:
       - IN: nginx_image
     flags:
       - test_1
-      - test_2
