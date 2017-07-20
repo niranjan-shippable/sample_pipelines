@@ -3,6 +3,8 @@ jobs:
     type: manifest
     steps:
       - IN: nginx_image
+    flags:
+      - trigger_1
 
  # - name: sample_java_runCI
  #   type: runCI
