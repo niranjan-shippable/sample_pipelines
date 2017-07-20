@@ -3,3 +3,8 @@ jobs:
     type: manifest
     steps:
       - IN: nginx_image
+
+  - name: sample_java_runCI
+    type: runCI
+    steps:
+      - IN: nginx_image
