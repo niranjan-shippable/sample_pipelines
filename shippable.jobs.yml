@@ -4,10 +4,10 @@ jobs:
     steps:
       - IN: nginx_image
 
-  - name: sample_java_runCI
-    type: runCI
-    steps:
-      - IN: nginx_image
-    flags:
-      - test_1
-      - test_2
+#  - name: sample_java_runCI
+#    type: runCI
+#    steps:
+#      - IN: nginx_image
+#    flags:
+#      - test_1
+#      - test_2
