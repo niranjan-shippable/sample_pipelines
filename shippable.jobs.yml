@@ -3,6 +3,9 @@ jobs:
     type: manifest
     steps:
       - IN: nginx_image
+    flags:
+      - test_n_1
+      - test_n_2
 
   - name: trigger_runSh_2
     type: manifest
