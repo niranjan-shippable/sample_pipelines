@@ -1,0 +1,5 @@
+triggers:
+   - name: trigger-resource
+     type: trigger
+     version:
+       counter: 1
