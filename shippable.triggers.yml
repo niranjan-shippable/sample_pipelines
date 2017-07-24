@@ -3,3 +3,4 @@ triggers:
      type: trigger
      version:
        counter: 1
+     flags: random
