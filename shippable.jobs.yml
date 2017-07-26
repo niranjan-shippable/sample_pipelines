@@ -6,6 +6,11 @@ jobs:
     flags:
       - test_n_2
 
+  - name: runSh
+    type: manifest
+    steps:
+      - IN: trigger_runSh
+
   - name: trigger_runSh_2
     type: manifest
     steps:
