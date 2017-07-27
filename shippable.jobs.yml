@@ -58,7 +58,7 @@ jobs:
       - IN: trigger_runSh_0
       - TASK:
         - script: echo "versionName=$BUILD_NUMBER" >> $JOB_STATE/runSh_0.env
-        - script: random_failure
+        - script: echo "hello there"
 
 
   - name: runSh_1
