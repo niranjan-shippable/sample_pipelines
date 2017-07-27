@@ -57,6 +57,7 @@ jobs:
     steps:
       - IN: trigger_runSh_0
       - TASK:
+        - echo "versionName=$BUILD_NUMBER" >> $JOB_STATE/runSh_0.env
         - script: sleep 60
 
 
