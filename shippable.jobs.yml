@@ -61,8 +61,23 @@ jobs:
         - script: echo "versionName=$BUILD_NUMBER" >> $JOB_STATE/runSh_0.env
         - script: echo "hello there"
 
+  - name: runSh_failed_pinnedVersion
+    type: runSh
+    steps:
+      - IN: trigger_runSh_1
+      - IN: runSh_0
+      - TASK:
+        - script: sleep 60
 
-  - name: runSh_1
+  - name: runSh_success_pinnedVersion
+    type: runSh
+    steps:
+      - IN: trigger_runSh_1
+      - IN: runSh_0
+      - TASK:
+        - script: sleep 60
+
+  - name: runSh_unpinnedVersion
     type: runSh
     steps:
       - IN: trigger_runSh_1
