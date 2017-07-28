@@ -18,6 +18,7 @@ jobs:
     type: runCI
     steps:
       - IN: trigger_runCI_0
+    flags: runCI_sample_node_flag
 
   - name: unhooked_project_runCI
     type: runCI
