@@ -4,31 +4,11 @@ jobs:
     steps:
       - IN: nginx_image
 
-  - name: trigger_runCI_1
-    type: manifest
-    steps:
-      - IN: nginx_image
-
-  - name: trigger_runCI_2
-    type: manifest
-    steps:
-      - IN: nginx_image
-
   - name: sample_node_runCI
     type: runCI
     steps:
       - IN: trigger_runCI_0
     flags: runCI_sample_node_flag
-
-  - name: unhooked_project_runCI
-    type: runCI
-    steps:
-      - IN: trigger_runCI_1
-
-  - name: sample_java_runCI
-    type: runCI
-    steps:
-      - IN: trigger_runCI_2
       
   - name: matrix_test
     type: manifest
