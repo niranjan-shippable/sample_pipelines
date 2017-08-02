@@ -39,6 +39,7 @@ jobs:
     type: runSh
     steps:
       - IN: trigger_runSh_1
+      - IN: sample_node_runCI      
       - IN: runSh_0
       - TASK:
         - script: sleep 60
@@ -47,6 +48,7 @@ jobs:
     type: runSh
     steps:
       - IN: trigger_runSh_1
+      - IN: sample_node_runCI      
       - IN: runSh_0
       - TASK:
         - script: sleep 60
@@ -55,6 +57,7 @@ jobs:
     type: runSh
     steps:
       - IN: trigger_runSh_1
+      - IN: sample_node_runCI
       - IN: runSh_0
       - TASK:
         - script: sleep 60
