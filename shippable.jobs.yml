@@ -26,11 +26,6 @@ jobs:
     steps:
       - IN: nginx_image
 
-  - name: trigger_runSh_2
-    type: manifest
-    steps:
-      - IN: nginx_image
-
   - name: runSh_0
     type: runSh
     steps:
@@ -61,12 +56,5 @@ jobs:
     steps:
       - IN: trigger_runSh_1
       - IN: runSh_0
-      - TASK:
-        - script: sleep 60
-
-  - name: runSh_2
-    type: runSh
-    steps:
-      - IN: trigger_runSh_2
       - TASK:
         - script: sleep 60
