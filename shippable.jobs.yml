@@ -68,6 +68,5 @@ jobs:
     type: runSh
     steps:
       - IN: trigger_runSh_2
-      - IN: runSh_1
       - TASK:
         - script: sleep 60
