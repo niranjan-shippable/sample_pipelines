@@ -24,13 +24,11 @@ jobs:
     type: runCI
     steps:
       - IN: trigger_runCI_1
-      - IN: sample_node_runCI
 
   - name: sample_java_runCI
     type: runCI
     steps:
       - IN: trigger_runCI_2
-      - IN: unhooked_project_runCI
       
   - name: matrix_test
     type: manifest
