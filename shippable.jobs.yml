@@ -25,7 +25,7 @@ jobs:
     steps:
       - IN: trigger_runSh_0
       - TASK:
-        #- script: failing_it
+        - script: failing_it
         - script: echo "versionName=$BUILD_NUMBER" >> $JOB_STATE/runSh_0.env
         - script: echo "hello there"
 
