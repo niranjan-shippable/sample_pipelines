@@ -9,13 +9,7 @@ jobs:
     steps:
       - IN: trigger_runCI_0
     flags: runCI_sample_node_flag
-      
-  - name: matrix_test
-    type: manifest
-    steps:
-      - IN: nginx_image
-      - IN: sample_java_runCI
-
+    
   - name: trigger_runSh_0
     type: manifest
     steps:
