@@ -20,7 +20,6 @@ jobs:
   - name: do_something
     type: runSh
     steps:
-      - IN: nginx-image-prod81
       - TASK:
         - script: docker images
         - script: sleep 30
