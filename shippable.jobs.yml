@@ -22,4 +22,4 @@ jobs:
     steps:
       - TASK:
         - script: docker images
-        - script: sleep 30
+        - script: sleep 10
