@@ -74,4 +74,5 @@ jobs:
       - IN: runSh_9
       - IN: runSh_10      
       - TASK:
-        - script: sleep 10           
+        - script: sleep 10
+        - script: echo versionName=hello_$BUILD_NUMBER > $JOB_STATE/runSh_11.env
