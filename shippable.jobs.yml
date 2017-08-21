@@ -5,7 +5,7 @@ jobs:
     steps:
       - IN: nginx-image
       - TASK:
-        - script: sleep 1
+        - script: sleep 60
         
   - name: runSh_2
     type: runSh
