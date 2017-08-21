@@ -1,6 +1,7 @@
 jobs:
   - name: runSh_1
     type: runSh
+    allowPublicAccess: true
     steps:
       - IN: nginx-image
       - TASK:
