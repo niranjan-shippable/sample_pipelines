@@ -1,12 +1,12 @@
 jobs:
-  - name: ubuntu-hello-world
-      type: runSh
-      runtime:
-        architecture: x86_64
-        os: Ubuntu_16.04
-        container: false
-      steps:
-        - TASK:
-            name: test-hello-world
-            script:
-              - echo "hello world guys !!!"
+
+  - name: test-hello
+    type: runSh
+    runtime:
+      architecture: x86_64
+      os: Ubuntu_16.04
+    steps:
+      - TASK:
+          name: should-print-hello
+          script: 
+            - echo "hello world guys!!! "
