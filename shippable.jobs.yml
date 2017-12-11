@@ -2,11 +2,7 @@ jobs:
 
   - name: test-hello
     type: runSh
-    runtime:
-      architecture: x86_64
-      os: Ubuntu_16.04
     steps:
       - TASK:
-          name: should-print-hello
           script: 
-            - echo "hello world guys!!! "
+            - echo "hello world!!! "
