@@ -4,5 +4,4 @@ jobs:
     type: runSh
     steps:
       - TASK:
-          script: 
-            - echo "hello world!!! "
+        - script:           echo "hello"
