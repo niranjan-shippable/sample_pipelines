@@ -5,4 +5,5 @@ jobs:
     steps:
       - TASK:
         - script: uname -a
-        - script: node -v
+        - script: lsb_release -a 
+        - script: shipctl asdf
