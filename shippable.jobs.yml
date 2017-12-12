@@ -6,4 +6,4 @@ jobs:
       - TASK:
         - script: uname -a
         - script: lsb_release -a 
-        - script: shipctl asdf
+        - script: which shipctl
